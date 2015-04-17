@@ -3,7 +3,7 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Qian Xin 錢 昕
+title:            Rose Bullet - Home for Qian Xin
 tagline:          'The personal blog of Qian Xin'
 url:              http://xeniaqian94.github.io
 paginate:         1
@@ -11,11 +11,11 @@ baseurl:          /
 author:
   name:           'Qian Xin'
   url:            https://twitter.com/mdo
-  email:          markdotto@gmail.com
+  email:          xeniaqian94@gmail.com
 
 # Custom vars
 version:          1.0.0
 github:
   repo:           https://github.com/poole/poole
 
-pages_list:       {'About':'/about','Archive':'/archive','Feed':'/atom.xml'}
+pages_list:       {'About Me':'/about','Archive':'/archive','Feed':'/atom.xml'}
