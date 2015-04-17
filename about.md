@@ -1,11 +1,13 @@
 ---
 layout: page
-title: About Qian Xin
+title: About Me
 ---
 
 <p class="message">
   Hey there! Welcome!
 </p>
+
+I'm Qian Xin, currently an undergraduate student.
 
 
 Thanks to the Poole project. This personal blog is built on Poole, Jekyll and hosted on GitHub.
