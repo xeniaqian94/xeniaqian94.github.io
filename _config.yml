@@ -18,4 +18,5 @@ version:          1.0.0
 github:
   repo:           https://github.com/poole/poole
 
-pages_list:       {'About Me':'/about','Archive':'/archive','Feed':'/atom.xml'}
+# pages_list:       {'About Me':'/about','Blog Posts':'/archive','Feed':'/atom.xml'}
+pages_list:       {'About Me':'/about','Blog Posts':'/archive'}
