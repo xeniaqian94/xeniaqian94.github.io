@@ -18,7 +18,9 @@ Hey there, welcome!
 
 I'm Xenia ['zi:niə],['zinɪə]. This English name was made from the actress *Xenia Goodwin* of my favorite drama *Dance Academy*, a drama that motivates me much during my teenage age. 
 
-My Chinese name is Qian Xin (钱 昕). You may find it easy to pronounce as Chien Hsin ;D. Xin is my first name, which has the meaning of Dawn, the time when the sun rises. 
+My Chinese name is Qian Xin (钱 昕). You may find it easy to pronounce as Chien Hsin ;D. Xin is my first name, which has the meaning of [Dawn] (http://en.wikipedia.org/wiki/Dawn), the time when the sun rises. 
+
+![Dawn from Google Pic](/pics/Dawn.jpg)  
 
 I love both my English name and my Chinese name because the meaning in them are positive, even beyond their original language and transcend different cultures. 
 
