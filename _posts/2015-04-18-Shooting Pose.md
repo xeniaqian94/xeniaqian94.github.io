@@ -21,6 +21,11 @@ By the sea, Instagram: [mia_go_mia](http://www.iphoneogram.com/u/303959678)
 
 Standing by wall, Wechat: 堂邦嘉真街拍哥 [eyestore2015](http://www.douban.com/people/musickenny/)
 
-![Along the seaside](/pics/pose/pose2.jpg)
+![Standing by wall](/pics/pose/pose2.jpg)
 
 -----
+
+Engrossed by a book, [*American Dreams in China*](http://en.wikipedia.org/wiki/American_Dreams_in_China), Juan Du 
+
+![A reading girl](/pics/pose/pose44.jpg)
+
