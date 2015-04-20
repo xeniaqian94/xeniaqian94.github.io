@@ -34,5 +34,5 @@ Since secondary school, Math and Programming have interested my a lot. The story
 
 Thanks to the Poole project. This personal blog is built on Poole [GitHub Repo](https://github.com/poole/poole), Jekyll and hosted on GitHub.
 
-If you like this blog, follow me on [Facebook](https://www.facebook.com/jazmyn.qian), [Linkedin](https://cn.linkedin.com/in/xqian94), or [GitHub](https://github.com/xeniaqian94).
+If you like this blog, follow me on [Facebook](https://www.facebook.com/jazmyn.qian), [Linkedin](https://cn.linkedin.com/in/xqian94), or [GitHub](https://github.com/xeniaqian94).  
 
