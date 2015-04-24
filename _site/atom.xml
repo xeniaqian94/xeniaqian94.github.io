@@ -4,7 +4,7 @@
  <title>Rose Bullet - Home for Qian Xin</title>
  <link href="http://xeniaqian94.github.io/atom.xml" rel="self"/>
  <link href="http://xeniaqian94.github.io/"/>
- <updated>2015-04-23T12:29:57+08:00</updated>
+ <updated>2015-04-24T14:20:49+08:00</updated>
  <id>http://xeniaqian94.github.io</id>
  <author>
    <name>Qian Xin</name>
@@ -31,7 +31,7 @@
                                 Just v1 -&amp;gt; Just (v1 `div` v2)
                                 Nothing -&amp;gt; Nothing
                     Nothing -&amp;gt; Nothing&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Here we may notice 2 branches of &lt;code&gt;eval e2&lt;/code&gt;. That is, either &lt;code&gt;Nothing&lt;/code&gt; or &lt;code&gt;Just x&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Here we may notice 2 branches of &lt;code&gt;eval e2&lt;/code&gt;, either &lt;code&gt;Nothing&lt;/code&gt; or &lt;code&gt;Just x&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;If it is &lt;code&gt;Nothing&lt;/code&gt;, throw execption by returning &lt;code&gt;Nothing&lt;/code&gt;.&lt;/p&gt;
 
@@ -54,10 +54,27 @@ Nothing &amp;gt;&amp;gt;= f = Nothing&lt;/code&gt;&lt;/pre&gt;
   (&amp;gt;&amp;gt;=) :: m a -&amp;gt; (a -&amp;gt; m b) -&amp;gt; m b
   return :: a -&amp;gt; m a&lt;/code&gt;&lt;/pre&gt;
 
+&lt;h5 id=&quot;more-on-state-monad&quot;&gt;More on State Monad&lt;/h5&gt;
+&lt;p&gt;State Monad is useful for stateful computation.&lt;/p&gt;
+
+&lt;p&gt;A stateful computation is a function that takes some state and returns a value along with some new state.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;s -&amp;gt; (a, s)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tick :: State Int Int
+tick = do n &amp;lt;- get
+          put (n+1)
+          return n
+
+plusOne :: Int -&amp;gt; Int
+plusOne n = execState tick n
+
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;p&gt;Reference from: &lt;br /&gt;
 &lt;em&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps&quot;&gt;The Essence of Functional Programming&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
-&lt;em&gt;&lt;a href=&quot;http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/&quot;&gt;单子(monad)入门(一)&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
-
+&lt;em&gt;&lt;a href=&quot;http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/&quot;&gt;单子(monad)入门(一)&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;&lt;a href=&quot;http://learnyouahaskell.com/for-a-few-monads-more&quot;&gt;For a Few Monads More&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content>
  </entry>
  

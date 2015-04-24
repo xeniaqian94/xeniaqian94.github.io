@@ -63,7 +63,7 @@
                                 Just v1 -&gt; Just (v1 `div` v2)
                                 Nothing -&gt; Nothing
                     Nothing -&gt; Nothing</code></pre>
-<p>Here we may notice 2 branches of <code>eval e2</code>. That is, either <code>Nothing</code> or <code>Just x</code>.</p>
+<p>Here we may notice 2 branches of <code>eval e2</code>, either <code>Nothing</code> or <code>Just x</code>.</p>
 
 <p>If it is <code>Nothing</code>, throw execption by returning <code>Nothing</code>.</p>
 
@@ -86,10 +86,27 @@ Nothing &gt;&gt;= f = Nothing</code></pre>
   (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b
   return :: a -&gt; m a</code></pre>
 
+<h5 id="more-on-state-monad">More on State Monad</h5>
+<p>State Monad is useful for stateful computation.</p>
+
+<p>A stateful computation is a function that takes some state and returns a value along with some new state.</p>
+<pre><code>s -&gt; (a, s)</code></pre>
+
+<p>Example:</p>
+<pre><code>tick :: State Int Int
+tick = do n &lt;- get
+          put (n+1)
+          return n
+
+plusOne :: Int -&gt; Int
+plusOne n = execState tick n
+
+</code></pre>
+
 <p>Reference from: <br />
 <em><a href="http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps">The Essence of Functional Programming</a></em><br />
-<em><a href="http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/">单子(monad)入门(一)</a></em></p>
-
+<em><a href="http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/">单子(monad)入门(一)</a></em><br />
+<em><a href="http://learnyouahaskell.com/for-a-few-monads-more">For a Few Monads More</a></em></p>
 
 </article>
 
@@ -123,7 +140,7 @@ Nothing &gt;&gt;= f = Nothing</code></pre>
 
 </script>
         <small>
-          &copy; <time datetime="2015-04-23T12:29:57+08:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-04-24T14:20:49+08:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

@@ -17,7 +17,7 @@ Therefore, once divide by 0 occurs, `Nothing` is returned as a denote of execpti
                                 Just v1 -> Just (v1 `div` v2)
                                 Nothing -> Nothing
                     Nothing -> Nothing</code></pre>
-Here we may notice 2 branches of `eval e2`. That is, either `Nothing` or `Just x`.
+Here we may notice 2 branches of `eval e2`, either `Nothing` or `Just x`.
   
 If it is `Nothing`, throw execption by returning `Nothing`.  
 
@@ -39,10 +39,24 @@ In Haskell, Monad is defined as a type class.
 <pre><code>class Monad m where
   (>>=) :: m a -> (a -> m b) -> m b
   return :: a -> m a</code></pre>
+  
+#####More on State Monad
+State Monad is useful for stateful computation.  
 
+A stateful computation is a function that takes some state and returns a value along with some new state.
+<pre><code>s -> (a, s)</code></pre>
+ 
 
+Example:
+<pre><code>tick :: State Int Int
+tick = do n <- get
+          put (n+1)
+          return n
 
+plusOne :: Int -> Int
+plusOne n = execState tick n
 
+</code></pre>
 
 
 
@@ -59,5 +73,5 @@ In Haskell, Monad is defined as a type class.
 
 Reference from:   
 *[The Essence of Functional Programming](http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps)*  
-*[单子(monad)入门(一)](http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/)*
-
+*[单子(monad)入门(一)](http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/)*  
+*[For a Few Monads More](http://learnyouahaskell.com/for-a-few-monads-more)*
