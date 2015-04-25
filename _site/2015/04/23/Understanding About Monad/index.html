@@ -10,7 +10,7 @@
 
   <title>
     
-      Understanding About Monad &middot; Rose Bullet - Home for Qian Xin
+      Understanding About Monad &middot; Rose Bullet
     
   </title>
 
@@ -23,7 +23,7 @@
   <link rel="shortcut icon" href="/public/favicon.ico">
 
   <!-- RSS -->
-  <link rel="alternate" type="application/atom+xml" title="Rose Bullet - Home for Qian Xin" href="/atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="Rose Bullet" href="/atom.xml">
 </head>
 
 
@@ -33,7 +33,7 @@
     <div class="container content">
       <header class="masthead">
         <h3 class="masthead-title">
-        <a href="/" title="Home">Rose Bullet - Home for Qian Xin</a>
+        <a href="/" title="Home">Rose Bullet</a>
 
         
           &nbsp;&nbsp;&nbsp;
@@ -49,7 +49,7 @@
         <article class="post">
   <h1 class="post-title">Understanding About Monad</h1>
   <time datetime="2015-04-23T00:00:00+08:00" class="page-date">23 Apr 2015</time>
-  <p>Following last week’s lecture, here is some of my basic understanding and note about Monad.</p>
+  <p>Following last week’s lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple <a href="http://en.wikipedia.org/wiki/Little_man_computer">Little-Man-Computer(LMC)</a> simulator, which decodes and executes program written in assembly language.</p>
 
 <h5 id="what-is-monad-for">What is Monad for?</h5>
 <p>Handling execption, e.g. divide by 0.</p>
@@ -86,7 +86,7 @@ Nothing &gt;&gt;= f = Nothing</code></pre>
   (&gt;&gt;=) :: m a -&gt; (a -&gt; m b) -&gt; m b
   return :: a -&gt; m a</code></pre>
 
-<h5 id="more-on-state-monad">More on State Monad</h5>
+<h5 id="something-on-state-monad">Something on State Monad</h5>
 <p>State Monad is useful for stateful computation.</p>
 
 <p>A stateful computation is a function that takes some state and returns a value along with some new state.</p>
@@ -103,8 +103,28 @@ plusOne n = execState tick n
 
 </code></pre>
 
-<p>Reference from: <br />
-<em><a href="http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps">The Essence of Functional Programming</a></em><br />
+<h5 id="something-on-errort-monad">Something on ErrorT Monad</h5>
+<p>The Error monad is also called the Exception monad. As the name suggests, it deals with Exception.</p>
+
+<p>In the LMC program, there could be many errors while decoding the instructions, for example,</p>
+
+<ul>
+  <li>
+    <p>currently Nothing in accumulator but a STA(store) instruction is to be executed</p>
+  </li>
+  <li>Jumping to an undefined label</li>
+  <li>Incrementing PC(program counter) but no more instructions</li>
+  <li>……</li>
+</ul>
+
+<p>To deal with these errors more appropriately instead of simply calling error function, a good solution is to wrap the <code>IOEnv</code> into <code>ErrorT</code>.</p>
+
+<blockquote>
+  <p>ErrorT monad transformer can be used to add error handling to another monad. <a href="https://hackage.haskell.org/package/mtl-1.1.0.2/docs/Control-Monad-Error.html">See an example to combine it with an IO monad</a></p>
+</blockquote>
+
+<h5 id="reference-from">Reference from</h5>
+<p><em><a href="http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps">The Essence of Functional Programming</a></em><br />
 <em><a href="http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/">单子(monad)入门(一)</a></em><br />
 <em><a href="http://learnyouahaskell.com/for-a-few-monads-more">For a Few Monads More</a></em></p>
 
@@ -113,6 +133,15 @@ plusOne n = execState tick n
 <aside class="related">
   <h2>Related Posts</h2>
   <ul class="related-posts">
+    
+      <li>
+        <h3>
+          <a href="//2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery/">
+            Spiritual Journey @ Tsz Shan Monastery, Tai Po
+            <small><time datetime="2015-04-25T00:00:00+08:00">25 Apr 2015</time></small>
+          </a>
+        </h3>
+      </li>
     
       <li>
         <h3>
@@ -140,7 +169,7 @@ plusOne n = execState tick n
 
 </script>
         <small>
-          &copy; <time datetime="2015-04-24T14:20:49+08:00">2015</time>. All rights reserved.
+          &copy; <time datetime="2015-04-26T00:45:41+08:00">2015</time>. All rights reserved.
         </small>
       </footer>
     </div>

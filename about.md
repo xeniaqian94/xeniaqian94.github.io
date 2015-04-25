@@ -26,7 +26,7 @@ I love both my English name and my Chinese name because the meaning in them are 
 
 I am currently an undergraduate student in [Zhejiang University](http://www.zju.edu.cn), studying Software Engineering, graduating in 2017. I was exchanged to [the University of Hong Kong](http://www.hku.hk), in the year of 2014-2015, studying Computer Science. [Continuing..]
 
-Since secondary school, Math and Programming have interested my a lot. The story of Ada Lovelace, the first female Computer Scientist, also inspired me while learning.  
+Since secondary school, Math and Programming have interested my a lot. The story of [Ada Lovelace](http://en.wikipedia.org/wiki/Ada_Lovelace), the first female Computer Scientist, also inspired me while learning.  
 
 ![Ada](/pics/Ada.png)  
 

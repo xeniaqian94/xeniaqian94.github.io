@@ -3,7 +3,7 @@ permalink:        pretty
 relative_permalinks: true
 
 # Setup
-title:            Rose Bullet - Home for Qian Xin
+title:            Rose Bullet
 tagline:          'The personal blog of Qian Xin'
 url:              http://xeniaqian94.github.io
 paginate:         1

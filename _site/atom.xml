@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Rose Bullet - Home for Qian Xin</title>
+ <title>Rose Bullet</title>
  <link href="http://xeniaqian94.github.io/atom.xml" rel="self"/>
  <link href="http://xeniaqian94.github.io/"/>
- <updated>2015-04-24T14:20:49+08:00</updated>
+ <updated>2015-04-26T00:45:41+08:00</updated>
  <id>http://xeniaqian94.github.io</id>
  <author>
    <name>Qian Xin</name>
@@ -13,11 +13,45 @@
 
  
  <entry>
+   <title>Spiritual Journey @ Tsz Shan Monastery, Tai Po</title>
+   <link href="http://xeniaqian94.github.io//2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery/"/>
+   <updated>2015-04-25T00:00:00+08:00</updated>
+   <id>http://xeniaqian94.github.io/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</id>
+   <content type="html">&lt;blockquote&gt;
+  &lt;p&gt;In the six periods of the day and night, the flocks of birds sing forth harmonious and elegant sounds.&lt;br /&gt;
+是諸眾鳥，書夜六時，出和雅音。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A monastery is a living teaching material, which provides spiritual practice lessons to anyone who come.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/BeforeEntering.jpg&quot; alt=&quot;BeforeEntering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Pond.jpg&quot; alt=&quot;Pond&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Lotus.jpg&quot; alt=&quot;Lotus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/GuanYin.jpg&quot; alt=&quot;GuanYin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/TrimmedTree.jpg&quot; alt=&quot;TrimmedTree and the Drum Tower&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;about-interdependency&quot;&gt;About “Interdependency”&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Interdependency.jpg&quot; alt=&quot;About interdependency&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;peter-harry-and-me&quot;&gt;Peter, Harry and me&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Group.jpg&quot; alt=&quot;Group&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;for-more-information-see-also&quot;&gt;For more information, see also&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.tszshan.org&quot;&gt;Tsz Shan Monastery&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+</content>
+ </entry>
+ 
+ <entry>
    <title>Understanding About Monad</title>
    <link href="http://xeniaqian94.github.io//2015/04/23/Understanding%20About%20Monad/"/>
    <updated>2015-04-23T00:00:00+08:00</updated>
    <id>http://xeniaqian94.github.io/2015/04/23/Understanding About Monad</id>
-   <content type="html">&lt;p&gt;Following last week’s lecture, here is some of my basic understanding and note about Monad.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Following last week’s lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Little_man_computer&quot;&gt;Little-Man-Computer(LMC)&lt;/a&gt; simulator, which decodes and executes program written in assembly language.&lt;/p&gt;
 
 &lt;h5 id=&quot;what-is-monad-for&quot;&gt;What is Monad for?&lt;/h5&gt;
 &lt;p&gt;Handling execption, e.g. divide by 0.&lt;/p&gt;
@@ -54,7 +88,7 @@ Nothing &amp;gt;&amp;gt;= f = Nothing&lt;/code&gt;&lt;/pre&gt;
   (&amp;gt;&amp;gt;=) :: m a -&amp;gt; (a -&amp;gt; m b) -&amp;gt; m b
   return :: a -&amp;gt; m a&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h5 id=&quot;more-on-state-monad&quot;&gt;More on State Monad&lt;/h5&gt;
+&lt;h5 id=&quot;something-on-state-monad&quot;&gt;Something on State Monad&lt;/h5&gt;
 &lt;p&gt;State Monad is useful for stateful computation.&lt;/p&gt;
 
 &lt;p&gt;A stateful computation is a function that takes some state and returns a value along with some new state.&lt;/p&gt;
@@ -71,8 +105,28 @@ plusOne n = execState tick n
 
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Reference from: &lt;br /&gt;
-&lt;em&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps&quot;&gt;The Essence of Functional Programming&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;h5 id=&quot;something-on-errort-monad&quot;&gt;Something on ErrorT Monad&lt;/h5&gt;
+&lt;p&gt;The Error monad is also called the Exception monad. As the name suggests, it deals with Exception.&lt;/p&gt;
+
+&lt;p&gt;In the LMC program, there could be many errors while decoding the instructions, for example,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;currently Nothing in accumulator but a STA(store) instruction is to be executed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jumping to an undefined label&lt;/li&gt;
+  &lt;li&gt;Incrementing PC(program counter) but no more instructions&lt;/li&gt;
+  &lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To deal with these errors more appropriately instead of simply calling error function, a good solution is to wrap the &lt;code&gt;IOEnv&lt;/code&gt; into &lt;code&gt;ErrorT&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ErrorT monad transformer can be used to add error handling to another monad. &lt;a href=&quot;https://hackage.haskell.org/package/mtl-1.1.0.2/docs/Control-Monad-Error.html&quot;&gt;See an example to combine it with an IO monad&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;reference-from&quot;&gt;Reference from&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps&quot;&gt;The Essence of Functional Programming&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;&lt;a href=&quot;http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/&quot;&gt;单子(monad)入门(一)&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;&lt;a href=&quot;http://learnyouahaskell.com/for-a-few-monads-more&quot;&gt;For a Few Monads More&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </content>

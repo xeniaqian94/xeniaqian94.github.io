@@ -3,8 +3,9 @@ layout: post
 title: Understanding About Monad
 ---
 
-Following last week's lecture, here is some of my basic understanding and note about Monad.   
-
+Following last week's lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple [Little-Man-Computer(LMC)](http://en.wikipedia.org/wiki/Little_man_computer) simulator, which decodes and executes program written in assembly language.  
+  
+  
 #####What is Monad for?  
 Handling execption, e.g. divide by 0.  
 <pre><code>data Expr = Num Int | Neg Expr | Add Expr Expr | Div Expr Expr</code></pre>
@@ -38,9 +39,10 @@ Note that `mzero` is a rename of `Nothing`.
 In Haskell, Monad is defined as a type class.
 <pre><code>class Monad m where
   (>>=) :: m a -> (a -> m b) -> m b
-  return :: a -> m a</code></pre>
+  return :: a -> m a</code></pre>  
   
-#####More on State Monad
+    
+#####Something on State Monad
 State Monad is useful for stateful computation.  
 
 A stateful computation is a function that takes some state and returns a value along with some new state.
@@ -56,7 +58,23 @@ tick = do n <- get
 plusOne :: Int -> Int
 plusOne n = execState tick n
 
-</code></pre>
+</code></pre>  
+  
+  
+#####Something on ErrorT Monad
+The Error monad is also called the Exception monad. As the name suggests, it deals with Exception. 
+ 
+In the LMC program, there could be many errors while decoding the instructions, for example,
+
+* currently Nothing in accumulator but a STA(store) instruction is to be executed
+
+* Jumping to an undefined label
+* Incrementing PC(program counter) but no more instructions
+* ......
+
+To deal with these errors more appropriately instead of simply calling error function, a good solution is to wrap the <code>IOEnv</code> into <code>ErrorT</code>.
+
+>ErrorT monad transformer can be used to add error handling to another monad. [See an example to combine it with an IO monad](https://hackage.haskell.org/package/mtl-1.1.0.2/docs/Control-Monad-Error.html)
 
 
 
@@ -68,10 +86,7 @@ plusOne n = execState tick n
 
 
 
-
-
-
-Reference from:   
+#####Reference from   
 *[The Essence of Functional Programming](http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps)*  
 *[单子(monad)入门(一)](http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/)*  
 *[For a Few Monads More](http://learnyouahaskell.com/for-a-few-monads-more)*
