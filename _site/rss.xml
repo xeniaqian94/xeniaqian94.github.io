@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+        <title>Rose Bullet</title>
+        <description>Rose Bullet - Qian Xin</description>
+        <link>http://xeniaqian94.github.io</link>
+        <link>http://xeniaqian94.github.io</link>
+        <lastBuildDate>2015-05-01T19:53:24+08:00</lastBuildDate>
+        <pubDate>2015-05-01T19:53:24+08:00</pubDate>
+        <ttl>1800</ttl>
+
+
+        <item>
+                <title>Spiritual Journey @ Tsz Shan Monastery, Tai Po</title>
+                <description>&lt;blockquote&gt;
+  &lt;p&gt;In the six periods of the day and night, the flocks of birds sing forth harmonious and elegant sounds.&lt;br /&gt;
+是諸眾鳥，書夜六時，出和雅音。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;A monastery is a living teaching material, which provides spiritual practice lessons to anyone who come.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/BeforeEntering.jpg&quot; alt=&quot;BeforeEntering&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Pond.jpg&quot; alt=&quot;Pond&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Lotus.jpg&quot; alt=&quot;Lotus&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/GuanYin.jpg&quot; alt=&quot;GuanYin&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/TrimmedTree.jpg&quot; alt=&quot;TrimmedTree and the Drum Tower&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;about-interdependency&quot;&gt;About “Interdependency”&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Interdependency.jpg&quot; alt=&quot;About interdependency&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;peter-harry-and-me&quot;&gt;Peter, Harry and me&lt;/h5&gt;
+&lt;p&gt;&lt;img src=&quot;/pics/TszShan/Group.jpg&quot; alt=&quot;Group&quot; /&gt;&lt;/p&gt;
+
+&lt;h5 id=&quot;for-more-information-see-also&quot;&gt;For more information, see also&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.tszshan.org&quot;&gt;Tsz Shan Monastery&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+
+</description>
+                <link>http://xeniaqian94.github.io/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery</link>
+                <guid>http://xeniaqian94.github.io/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</guid>
+                <pubDate>2015-04-25T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Understanding About Monad</title>
+                <description>&lt;p&gt;Following last week’s lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Little_man_computer&quot;&gt;Little-Man-Computer(LMC)&lt;/a&gt; simulator, which decodes and executes program written in assembly language.&lt;/p&gt;
+
+&lt;h5 id=&quot;what-is-monad-for&quot;&gt;What is Monad for?&lt;/h5&gt;
+&lt;p&gt;Handling execption, e.g. divide by 0.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data Expr = Num Int | Neg Expr | Add Expr Expr | Div Expr Expr&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;One solution is to use &lt;code&gt;Maybe&lt;/code&gt; datatype.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;data Maybe a = Just a | Nothing &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Therefore, once divide by 0 occurs, &lt;code&gt;Nothing&lt;/code&gt; is returned as a denote of execption.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;eval (Div e1 e2) = case eval e2 of
+                    Just 0 -&amp;gt; Nothing
+                    Just v2 -&amp;gt; case eval e1 of
+                                Just v1 -&amp;gt; Just (v1 `div` v2)
+                                Nothing -&amp;gt; Nothing
+                    Nothing -&amp;gt; Nothing&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Here we may notice 2 branches of &lt;code&gt;eval e2&lt;/code&gt;, either &lt;code&gt;Nothing&lt;/code&gt; or &lt;code&gt;Just x&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If it is &lt;code&gt;Nothing&lt;/code&gt;, throw execption by returning &lt;code&gt;Nothing&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;If it is &lt;code&gt;Just x&lt;/code&gt;, we may pass &lt;code&gt;Just x&lt;/code&gt; to subsequent function application.&lt;/p&gt;
+
+&lt;p&gt;The above 2 branches could be expressed by the &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; in Monad. Quite simple and clean.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;(&amp;gt;&amp;gt;=) : Maybe a -&amp;gt; (a -&amp;gt; Maybe b) -&amp;gt; Maybe b
+(Just x) &amp;gt;&amp;gt;= f = f x
+Nothing &amp;gt;&amp;gt;= f = Nothing&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Using the above &lt;code&gt;&amp;gt;&amp;gt;=&lt;/code&gt; definition, &lt;code&gt;eval (Div e1 e2)&lt;/code&gt; can be rewritten as,&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;eval (Div e1 e2) = eval e2 &amp;gt;&amp;gt;= \v2 -&amp;gt;
+                   if v2 == 0 then mzero
+                   else eval e1 &amp;gt;&amp;gt;= \v1 -&amp;gt;
+                        return (v1 `div` v2)&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that &lt;code&gt;mzero&lt;/code&gt; is a rename of &lt;code&gt;Nothing&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;In Haskell, Monad is defined as a type class.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;class Monad m where
+  (&amp;gt;&amp;gt;=) :: m a -&amp;gt; (a -&amp;gt; m b) -&amp;gt; m b
+  return :: a -&amp;gt; m a&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;something-on-state-monad&quot;&gt;Something on State Monad&lt;/h5&gt;
+&lt;p&gt;State Monad is useful for stateful computation.&lt;/p&gt;
+
+&lt;p&gt;A stateful computation is a function that takes some state and returns a value along with some new state.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;s -&amp;gt; (a, s)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;tick :: State Int Int
+tick = do n &amp;lt;- get
+          put (n+1)
+          return n
+
+plusOne :: Int -&amp;gt; Int
+plusOne n = execState tick n
+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h5 id=&quot;something-on-errort-monad&quot;&gt;Something on ErrorT Monad&lt;/h5&gt;
+&lt;p&gt;The Error monad is also called the Exception monad. As the name suggests, it deals with Exception.&lt;/p&gt;
+
+&lt;p&gt;In the LMC program, there could be many errors while decoding the instructions, for example,&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;currently Nothing in accumulator but a STA(store) instruction is to be executed&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Jumping to an undefined label&lt;/li&gt;
+  &lt;li&gt;Incrementing PC(program counter) but no more instructions&lt;/li&gt;
+  &lt;li&gt;……&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To deal with these errors more appropriately instead of simply calling error function, a good solution is to wrap the &lt;code&gt;IOEnv&lt;/code&gt; into &lt;code&gt;ErrorT&lt;/code&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;ErrorT monad transformer can be used to add error handling to another monad. &lt;a href=&quot;https://hackage.haskell.org/package/mtl-1.1.0.2/docs/Control-Monad-Error.html&quot;&gt;See an example to combine it with an IO monad&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h5 id=&quot;reference-from&quot;&gt;Reference from&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/papers/essence/essence.ps&quot;&gt;The Essence of Functional Programming&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;&lt;a href=&quot;http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/&quot;&gt;单子(monad)入门(一)&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
+&lt;em&gt;&lt;a href=&quot;http://learnyouahaskell.com/for-a-few-monads-more&quot;&gt;For a Few Monads More&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+                <link>http://xeniaqian94.github.io/2015/04/23/Understanding%20About%20Monad</link>
+                <guid>http://xeniaqian94.github.io/2015/04/23/Understanding About Monad</guid>
+                <pubDate>2015-04-23T00:00:00+08:00</pubDate>
+        </item>
+
+        <item>
+                <title>Posing Guide, Update Continuing</title>
+                <description>&lt;p&gt;I like photographing and taking photos. Sometimes, hmm… It is hard to get a good pose, really. :) That is why this post is about, the posing guide from my personal collection.&lt;/p&gt;
+
+&lt;p&gt;Copyright reserved to the original author.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you are…&lt;/p&gt;
+
+&lt;p&gt;By the sea, Instagram: &lt;a href=&quot;http://www.iphoneogram.com/u/303959678&quot;&gt;mia_go_mia&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/pose/pose1.png&quot; alt=&quot;Along the seaside&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Standing by wall, Wechat: 堂邦嘉真街拍哥 &lt;a href=&quot;http://www.douban.com/people/musickenny/&quot;&gt;eyestore2015&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/pose/pose2.jpg&quot; alt=&quot;Standing by wall&quot; /&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Engrossed by a book, &lt;a href=&quot;http://en.wikipedia.org/wiki/American_Dreams_in_China&quot;&gt;&lt;em&gt;American Dreams in China&lt;/em&gt;&lt;/a&gt;, Juan Du&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/pics/pose/pose44.jpg&quot; alt=&quot;A reading girl&quot; /&gt;&lt;/p&gt;
+
+</description>
+                <link>http://xeniaqian94.github.io/2015/04/18/Shooting%20Pose</link>
+                <guid>http://xeniaqian94.github.io/2015/04/18/Shooting Pose</guid>
+                <pubDate>2015-04-18T00:00:00+08:00</pubDate>
+        </item>
+
+
+</channel>
+</rss>

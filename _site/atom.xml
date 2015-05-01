@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-
+ 
  <title>Rose Bullet</title>
- <link href="http://xeniaqian94.github.io/atom.xml" rel="self"/>
- <link href="http://xeniaqian94.github.io/"/>
- <updated>2015-04-26T00:45:41+08:00</updated>
+ <link href="http://xeniaqian94.github.io/" rel="self"/>
+ <link href="http://xeniaqian94.github.io"/>
+ <updated>2015-05-01T19:53:24+08:00</updated>
  <id>http://xeniaqian94.github.io</id>
  <author>
    <name>Qian Xin</name>
@@ -14,7 +14,7 @@
  
  <entry>
    <title>Spiritual Journey @ Tsz Shan Monastery, Tai Po</title>
-   <link href="http://xeniaqian94.github.io//2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery/"/>
+   <link href="http://xeniaqian94.github.io/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery"/>
    <updated>2015-04-25T00:00:00+08:00</updated>
    <id>http://xeniaqian94.github.io/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</id>
    <content type="html">&lt;blockquote&gt;
@@ -48,7 +48,7 @@
  
  <entry>
    <title>Understanding About Monad</title>
-   <link href="http://xeniaqian94.github.io//2015/04/23/Understanding%20About%20Monad/"/>
+   <link href="http://xeniaqian94.github.io/2015/04/23/Understanding%20About%20Monad"/>
    <updated>2015-04-23T00:00:00+08:00</updated>
    <id>http://xeniaqian94.github.io/2015/04/23/Understanding About Monad</id>
    <content type="html">&lt;p&gt;Following last week’s lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Little_man_computer&quot;&gt;Little-Man-Computer(LMC)&lt;/a&gt; simulator, which decodes and executes program written in assembly language.&lt;/p&gt;
@@ -134,7 +134,7 @@ plusOne n = execState tick n
  
  <entry>
    <title>Posing Guide, Update Continuing</title>
-   <link href="http://xeniaqian94.github.io//2015/04/18/Shooting%20Pose/"/>
+   <link href="http://xeniaqian94.github.io/2015/04/18/Shooting%20Pose"/>
    <updated>2015-04-18T00:00:00+08:00</updated>
    <id>http://xeniaqian94.github.io/2015/04/18/Shooting Pose</id>
    <content type="html">&lt;p&gt;I like photographing and taking photos. Sometimes, hmm… It is hard to get a good pose, really. :) That is why this post is about, the posing guide from my personal collection.&lt;/p&gt;
@@ -164,5 +164,5 @@ plusOne n = execState tick n
 </content>
  </entry>
  
-
+ 
 </feed>
