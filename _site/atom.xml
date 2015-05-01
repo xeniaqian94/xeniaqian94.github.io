@@ -4,7 +4,7 @@
  <title>Rose Bullet</title>
  <link href="http://xeniaqian94.github.io/" rel="self"/>
  <link href="http://xeniaqian94.github.io"/>
- <updated>2015-05-01T19:53:24+08:00</updated>
+ <updated>2015-05-01T20:59:35+08:00</updated>
  <id>http://xeniaqian94.github.io</id>
  <author>
    <name>Qian Xin</name>
@@ -13,10 +13,22 @@
 
  
  <entry>
+   <title>Study Note of OpenCV, Computer Vision</title>
+   <link href="http://xeniaqian94.github.io/career/2015/05/01/Intro%20to%20Intermediate,%20Computer%20Vision"/>
+   <updated>2015-05-01T00:00:00+08:00</updated>
+   <id>http://xeniaqian94.github.io/career/2015/05/01/Intro to Intermediate, Computer Vision</id>
+   <content type="html">&lt;h5 id=&quot;the-core-functionality&quot;&gt;The Core Functionality&lt;/h5&gt;
+
+&lt;h5 id=&quot;reference-from&quot;&gt;Reference from&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://docs.opencv.org/doc/tutorials/tutorials.html&quot;&gt;OpenCV Tutorials&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</content>
+ </entry>
+ 
+ <entry>
    <title>Spiritual Journey @ Tsz Shan Monastery, Tai Po</title>
-   <link href="http://xeniaqian94.github.io/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery"/>
+   <link href="http://xeniaqian94.github.io/on%20the%20road/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery"/>
    <updated>2015-04-25T00:00:00+08:00</updated>
-   <id>http://xeniaqian94.github.io/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</id>
+   <id>http://xeniaqian94.github.io/on%20the%20road/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</id>
    <content type="html">&lt;blockquote&gt;
   &lt;p&gt;In the six periods of the day and night, the flocks of birds sing forth harmonious and elegant sounds.&lt;br /&gt;
 是諸眾鳥，書夜六時，出和雅音。&lt;/p&gt;
@@ -48,9 +60,9 @@
  
  <entry>
    <title>Understanding About Monad</title>
-   <link href="http://xeniaqian94.github.io/2015/04/23/Understanding%20About%20Monad"/>
+   <link href="http://xeniaqian94.github.io/career/2015/04/23/Understanding%20About%20Monad"/>
    <updated>2015-04-23T00:00:00+08:00</updated>
-   <id>http://xeniaqian94.github.io/2015/04/23/Understanding About Monad</id>
+   <id>http://xeniaqian94.github.io/career/2015/04/23/Understanding About Monad</id>
    <content type="html">&lt;p&gt;Following last week’s lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple &lt;a href=&quot;http://en.wikipedia.org/wiki/Little_man_computer&quot;&gt;Little-Man-Computer(LMC)&lt;/a&gt; simulator, which decodes and executes program written in assembly language.&lt;/p&gt;
 
 &lt;h5 id=&quot;what-is-monad-for&quot;&gt;What is Monad for?&lt;/h5&gt;
@@ -134,9 +146,9 @@ plusOne n = execState tick n
  
  <entry>
    <title>Posing Guide, Update Continuing</title>
-   <link href="http://xeniaqian94.github.io/2015/04/18/Shooting%20Pose"/>
+   <link href="http://xeniaqian94.github.io/lifestyle/2015/04/18/Shooting%20Pose"/>
    <updated>2015-04-18T00:00:00+08:00</updated>
-   <id>http://xeniaqian94.github.io/2015/04/18/Shooting Pose</id>
+   <id>http://xeniaqian94.github.io/lifestyle/2015/04/18/Shooting Pose</id>
    <content type="html">&lt;p&gt;I like photographing and taking photos. Sometimes, hmm… It is hard to get a good pose, really. :) That is why this post is about, the posing guide from my personal collection.&lt;/p&gt;
 
 &lt;p&gt;Copyright reserved to the original author.&lt;/p&gt;

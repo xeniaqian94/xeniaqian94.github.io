@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Posing Guide, Update Continuing
+categories: [lifestyle]
+tags : [Photography]
+
 ---
 
 I like photographing and taking photos. Sometimes, hmm... It is hard to get a good pose, really. :) That is why this post is about, the posing guide from my personal collection.  

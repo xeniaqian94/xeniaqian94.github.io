@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Spiritual Journey @ Tsz Shan Monastery, Tai Po
+categories: [On the Road]
+tags : [Hong Kong, Buddism]
+
 ---
 >In the six periods of the day and night, the flocks of birds sing forth harmonious and elegant sounds.  
 是諸眾鳥，書夜六時，出和雅音。

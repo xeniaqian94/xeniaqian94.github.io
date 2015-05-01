@@ -13,6 +13,7 @@ http://xeniaqian94.github.io/rss.xml
 http://xeniaqian94.github.io/sitemap.txt
 http://xeniaqian94.github.io/tags.html
 
-http://xeniaqian94.github.io/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery
-http://xeniaqian94.github.io/2015/04/23/Understanding%20About%20Monad
-http://xeniaqian94.github.io/2015/04/18/Shooting%20Pose
+http://xeniaqian94.github.io/career/2015/05/01/Intro%20to%20Intermediate,%20Computer%20Vision
+http://xeniaqian94.github.io/on%20the%20road/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery
+http://xeniaqian94.github.io/career/2015/04/23/Understanding%20About%20Monad
+http://xeniaqian94.github.io/lifestyle/2015/04/18/Shooting%20Pose

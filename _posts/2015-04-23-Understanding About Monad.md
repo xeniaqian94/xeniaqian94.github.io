@@ -1,7 +1,8 @@
 ---
 layout: post
 title: Understanding About Monad
-tags : [intro, beginner,haskell]
+categories: [career]
+tags : [Functional Programming,Haskell]
 ---
 
 Following last week's lecture on Functional Programming, this study note is my basic understanding about Monad while studying and implementing a simple [Little-Man-Computer(LMC)](http://en.wikipedia.org/wiki/Little_man_computer) simulator, which decodes and executes program written in assembly language.  

@@ -5,10 +5,22 @@
         <description>Rose Bullet - Qian Xin</description>
         <link>http://xeniaqian94.github.io</link>
         <link>http://xeniaqian94.github.io</link>
-        <lastBuildDate>2015-05-01T19:53:24+08:00</lastBuildDate>
-        <pubDate>2015-05-01T19:53:24+08:00</pubDate>
+        <lastBuildDate>2015-05-01T20:59:35+08:00</lastBuildDate>
+        <pubDate>2015-05-01T20:59:35+08:00</pubDate>
         <ttl>1800</ttl>
 
+
+        <item>
+                <title>Study Note of OpenCV, Computer Vision</title>
+                <description>&lt;h5 id=&quot;the-core-functionality&quot;&gt;The Core Functionality&lt;/h5&gt;
+
+&lt;h5 id=&quot;reference-from&quot;&gt;Reference from&lt;/h5&gt;
+&lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://docs.opencv.org/doc/tutorials/tutorials.html&quot;&gt;OpenCV Tutorials&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+</description>
+                <link>http://xeniaqian94.github.io/career/2015/05/01/Intro%20to%20Intermediate,%20Computer%20Vision</link>
+                <guid>http://xeniaqian94.github.io/career/2015/05/01/Intro to Intermediate, Computer Vision</guid>
+                <pubDate>2015-05-01T00:00:00+08:00</pubDate>
+        </item>
 
         <item>
                 <title>Spiritual Journey @ Tsz Shan Monastery, Tai Po</title>
@@ -39,8 +51,8 @@
 &lt;p&gt;&lt;em&gt;&lt;a href=&quot;http://www.tszshan.org&quot;&gt;Tsz Shan Monastery&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 
 </description>
-                <link>http://xeniaqian94.github.io/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery</link>
-                <guid>http://xeniaqian94.github.io/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</guid>
+                <link>http://xeniaqian94.github.io/on%20the%20road/2015/04/25/Spiritual%20Journey%20@%20Tsz%20Shan%20Monastery</link>
+                <guid>http://xeniaqian94.github.io/on%20the%20road/2015/04/25/Spiritual Journey @ Tsz Shan Monastery</guid>
                 <pubDate>2015-04-25T00:00:00+08:00</pubDate>
         </item>
 
@@ -125,8 +137,8 @@ plusOne n = execState tick n
 &lt;em&gt;&lt;a href=&quot;http://www.iis.sinica.edu.tw/~scm/ncs/2009/11/a-monad-primer/&quot;&gt;单子(monad)入门(一)&lt;/a&gt;&lt;/em&gt;&lt;br /&gt;
 &lt;em&gt;&lt;a href=&quot;http://learnyouahaskell.com/for-a-few-monads-more&quot;&gt;For a Few Monads More&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
 </description>
-                <link>http://xeniaqian94.github.io/2015/04/23/Understanding%20About%20Monad</link>
-                <guid>http://xeniaqian94.github.io/2015/04/23/Understanding About Monad</guid>
+                <link>http://xeniaqian94.github.io/career/2015/04/23/Understanding%20About%20Monad</link>
+                <guid>http://xeniaqian94.github.io/career/2015/04/23/Understanding About Monad</guid>
                 <pubDate>2015-04-23T00:00:00+08:00</pubDate>
         </item>
 
@@ -157,8 +169,8 @@ plusOne n = execState tick n
 &lt;p&gt;&lt;img src=&quot;/pics/pose/pose44.jpg&quot; alt=&quot;A reading girl&quot; /&gt;&lt;/p&gt;
 
 </description>
-                <link>http://xeniaqian94.github.io/2015/04/18/Shooting%20Pose</link>
-                <guid>http://xeniaqian94.github.io/2015/04/18/Shooting Pose</guid>
+                <link>http://xeniaqian94.github.io/lifestyle/2015/04/18/Shooting%20Pose</link>
+                <guid>http://xeniaqian94.github.io/lifestyle/2015/04/18/Shooting Pose</guid>
                 <pubDate>2015-04-18T00:00:00+08:00</pubDate>
         </item>
 
