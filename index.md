@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Qian Xin's Home
+title: Qian Xin
 tagline: [intro,Qian Xin]
 ---
 {% include JB/setup %}
